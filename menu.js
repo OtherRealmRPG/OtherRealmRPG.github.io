@@ -3,7 +3,7 @@ function noEvent( li ){ li.addEventListener( 'click', function ( e ){ e.stopProp
 function openEvent( li, ul ) { li.addEventListener( 'click', function ( e ){ e.stopPropagation(); ul.classList.toggle( 'open' ); }, false ); }
 
 function urlCheck( a, page ) {
-	var href = ( a.href || '' ).split( '?' )[ 0 ];
+	var href = ( a.href || '' ).split( '?' )[ 0 ].replace( /^https*\:\/\/[^\/]+/, '' );
 	if ( href.match( /index\.html$/ ) ){ href = href.replace( /index\.html$/, '' ); }
 	if ( href.match( /^file\:\/\// ) ){ href = href.replace( /^file\:\/\//, '' ); }
 	return ( href === page );
