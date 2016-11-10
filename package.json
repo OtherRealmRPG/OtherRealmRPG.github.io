@@ -1,0 +1,20 @@
+{
+  "name": "updat",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "update.es6",
+  "scripts": {
+  	"update": "node update.es6 & git add -A",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OtherRealmRPG/OtherRealmRPG.github.io.git"
+  },
+  "author": "Hiroki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OtherRealmRPG/OtherRealmRPG.github.io/issues"
+  },
+  "homepage": "https://github.com/OtherRealmRPG/OtherRealmRPG.github.io#readme"
+}

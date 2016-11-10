@@ -1,0 +1,8 @@
+#menu { display: block; float: left; }
+#menu li { cursor: auto; }
+#menu li.link:hover { cursor: pointer; }
+#menu li > ul { display: none; }
+#menu li > ul.open { display: block; }
+#menu li.select { background-color: lightgray; }
+
+article { display: block; }
