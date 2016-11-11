@@ -6,3 +6,15 @@
 #menu li.select { background-color: lightgray; }
 
 article { display: block; }
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #CCC;
+}
+th, td {
+  padding: 5px 10px;
+  border: 1px solid #CCC;
+}
+th {
+  background: #EEE;
+}
