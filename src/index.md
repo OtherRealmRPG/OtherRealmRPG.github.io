@@ -7,23 +7,23 @@ __－倒せ！稼げ！全ては己の欲望のまま！アンリバースを打
 # リンク
 
 + ルールセクション
-  + [キャラクターメイク](rule/charamake.html)
-  + [コアルール](rule/corerule.html)
-  + [スポットルール](rule/spotrule.html)
+  + [キャラクターメイク](page/rule/charamake.html)
+  + [コアルール](page/rule/corerule.html)
+  + [スポットルール](page/rule/spotrule.html)
 + クラスデータ
-　+ [特技について](group/skillindex.html)
-  + [ミーガ](group/miga.html)
-  + [ダクミーガ](group/dkmiga.html)
-  + [ハスル](group/hsl.html)
-  + [ダクネス](group/dknes.html)
-  + [ライロ](group/railo.html)
-  + [ドラゴ](group/drago.html)
+  + [特技について](page/group/skillindex.html)
+  + [ミーガ](page/group/miga.html)
+  + [ダクミーガ](page/group/dkmiga.html)
+  + [ハスル](page/group/hsl.html)
+  + [ダクネス](page/group/dknes.html)
+  + [ライロ](page/group/railo.html)
+  + [ドラゴ](page/group/drago.html)
 + 武器クラスデータ
 + アイテムデータ
 + ワールドセクション
 + エネミーデータ
 ---
-[プロローグ](#prologe)　／　[はじめに](#readme)　／　[世界観概要](#world)　／　[用語集および処理の仕方](#words)
+[プロローグ](page/index.html#prologe)　／　[はじめに](page/index.html#readme)　／　[世界観概要](page/index.html#world)　／　[用語集および処理の仕方](page/index.html#words)
 
 # <a name ="prologe"> プロローグ
 死人の魂が辿り着く場所といわれている世界アザーリアルム  
