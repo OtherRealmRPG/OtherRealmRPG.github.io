@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><base href="../.."><title>キャラクターメイク - </title>
+<link rel="stylesheet" href="./style.css" type="text/css">
+<script src="./menu.js"></script>
+</head>
+<body><section id="menu"><p><a href="./">トップ</a> &lt;= トップページに戻る。</p>
+<ul>
+<li>はじめに<ul>
+<li><a href="page/">はじめに</a>　&lt;= index.htmlは省略可能。ページの見た目的に省略推奨。</li>
+</ul>
+</li>
+<li>人<ul>
+<li><a href="page/chara/">人について</a></li>
+<li><a href="page/chara/fighter.html">戦士</a></li>
+</ul>
+</li>
+</ul>
+</section><a href="src/rule/charamake.md" download="charamake.md">Source Download</a>
+<article><h1 id="-">キャラクターメイク</h1>
+<hr>
+<p>『ＯＲＭ』の世界で遊ぶためには、あなたの分身となるキャラクターを作成しなければなりません。
+最初は苦戦するかもしれませんが。大丈夫、何度も作っていればすぐに慣れるでしょう！
+専用のシートをＤＬして、以下の手順どおり作成してみましょう！</p>
+<ul>
+<li>目次
+①<a href="#Level">レベルの決定</a>
+②<a href="#Class">種族、武器クラスの決定</a>
+③<a href="#Works">ワークスの決定</a>
+④<a href="#Status">能力値の決定</a>
+⑤<a href="#StatusLevel">能力レベルの決定</a>
+⑥<a href="#SKill">特技の決定</a>
+⑦<a href="#Item">アイテムの決定</a>
+⑧<a href="#Substatus">副能力値の計算</a>
+⑨<a href="#Personal">パーソナルデータの決定</a></li>
+</ul>
+<h2 id="-a-name-level-"><a name="Level"> ①レベルの決定</h2>
+<p>　まずこのレベル欄には「１」が記入されます。もしあなたがレベルの高い状態から開始しようと思った場合でも、この数値は１からはじめるといいでしょう。その後、レベルアップの処理を行えばよいのだから。</p>
+<h2 id="-a-name-class-"><a name="Class"> ②種族、武器クラスの決定</h2>
+<p>　選択できる種族から１種類、武器から２種類選択しましょう。それぞれの種族や武器には能力値が決められているので、以下の表を参考にしましょう。とはいえ、致命的に遊べなくなるというわけではないので、自由に選んで構いません。
+　能力値は以下の通りです。</p>
+<ul>
+<li>筋力<br>肉体の強さ、頑丈さを表す能力値。肉体的な行動限界を表すＨＰなどにも関わる。</li>
+<li>反射<br>反射神経の高さ、素早さを表す能力値。どれだけ１度に移動できるか移動力などにも関わる。</li>
+<li>感覚<br>目や耳などの五感のよさを表す能力値。先制の取りやすさの行動値にも関わる。</li>
+<li>知力<br>知識量、判断の速さなどを表す能力値。先制の取りやすさの行動値にも関わる。</li>
+<li>精神<br>心の強さや集中力の高さを表す能力値。精神的な行動限界を表すＭＰなどに関わる。</li>
+<li>社会<br>社会に対してどれだけ適応力があるか表す能力値。交渉術などに関わる。</li>
+</ul>
+<p>種族表は以下の通りです。ここに記述されているのは</p>
+<table>
+<thead>
+<tr>
+<th>呼称</th>
+<th style="text-align:center">筋力</th>
+<th style="text-align:center">反射</th>
+<th style="text-align:center">感覚</th>
+<th style="text-align:center">知力</th>
+<th style="text-align:center">精神</th>
+<th style="text-align:center">社会</th>
+<th style="text-align:center">ＨＰ修正</th>
+<th style="text-align:center">ＭＰ修正</th>
+<th style="text-align:center">ＨＰ成長</th>
+<th style="text-align:center">ＭＰ成長</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ミーガ</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td>ダクミーガ</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">9</td>
+</tr>
+<tr>
+<td>ハスル</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">7</td>
+</tr>
+<tr>
+<td>ダクネス</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td>ライロ</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">9</td>
+</tr>
+<tr>
+<td>ドラゴ</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">6</td>
+</tr>
+</tbody>
+</table>
+<p>武器表は以下の通りです。</p>
+<table>
+<thead>
+<tr>
+<th>呼称</th>
+<th style="text-align:center">筋力</th>
+<th style="text-align:center">反射</th>
+<th style="text-align:center">感覚</th>
+<th style="text-align:center">知力</th>
+<th style="text-align:center">精神</th>
+<th style="text-align:center">社会</th>
+<th style="text-align:center">ＨＰ修正</th>
+<th style="text-align:center">ＭＰ修正</th>
+<th style="text-align:center">ＨＰ成長</th>
+<th style="text-align:center">ＭＰ成長</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小剣</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td>長剣</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td>刀</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td>斧</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td>弓</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td>ボウガン</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td>腕輪</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+</tr>
+</tbody>
+</table>
+<p>種族と武器クラスが決まれば、次はワークス（職業）の決定をします。</p>
+<h2 id="-a-name-works-"><a name="Works"> ③ワークスの決定</h2>
+<p>　いつもあなたのキャラクターが冒険者をやっているわけではありません。また、元々はこういう仕事をしていたという経歴があるかもしれません。そのイメージに近いワークス、もしくは能力が合っていそうなワークスを選びましょう。
+　選べるワークスは以下の通りです。</p>
+<table>
+<thead>
+<tr>
+<th>呼称</th>
+<th style="text-align:center">筋力</th>
+<th style="text-align:center">反射</th>
+<th style="text-align:center">感覚</th>
+<th style="text-align:center">知力</th>
+<th style="text-align:center">精神</th>
+<th style="text-align:center">社会</th>
+<th style="text-align:center">ＨＰ修正</th>
+<th style="text-align:center">ＭＰ修正</th>
+<th style="text-align:center">ワークス特技</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>暗殺者</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">戦闘</td>
+</tr>
+<tr>
+<td>学者</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">知識</td>
+</tr>
+<tr>
+<td>学生</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">知識</td>
+</tr>
+<tr>
+<td>狩人</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">技術</td>
+</tr>
+<tr>
+<td>間者</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">技術</td>
+</tr>
+<tr>
+<td>騎士</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">戦闘</td>
+</tr>
+<tr>
+<td>貴族</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">社会</td>
+</tr>
+<tr>
+<td>吟遊詩人</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">社会</td>
+</tr>
+<tr>
+<td>軍人</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">戦闘</td>
+</tr>
+<tr>
+<td>剣闘士</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">戦闘</td>
+</tr>
+<tr>
+<td>護衛</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">戦闘</td>
+</tr>
+<tr>
+<td>従者</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">社会</td>
+</tr>
+<tr>
+<td>商人</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">社会</td>
+</tr>
+<tr>
+<td>神官</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">知識</td>
+</tr>
+<tr>
+<td>戦士</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">戦闘</td>
+</tr>
+<tr>
+<td>盗賊</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">技術</td>
+</tr>
+<tr>
+<td>野伏</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">技術</td>
+</tr>
+<tr>
+<td>冒険者</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">戦闘</td>
+</tr>
+<tr>
+<td>放浪者</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">技術</td>
+</tr>
+<tr>
+<td>魔術使い</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">魔術</td>
+</tr>
+<tr>
+<td>無法者</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">戦闘</td>
+</tr>
+<tr>
+<td>薬師</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">知識</td>
+</tr>
+<tr>
+<td>闇の一族</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">戦闘</td>
+</tr>
+<tr>
+<td>傭兵</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">戦闘</td>
+</tr>
+</tbody>
+</table>
+<p>　ワークスを選んだら、次は能力値の決定をします。</p>
+<h2 id="-a-name-status-"><a name="Status"> ④能力値の決定</h2>
+<p>　まず、キャラクターの［能力基本値］を決定します。前述のワークス表を参照して、選択したワークスの能力基本値を書き出します。
+　次に５点のボーナスポイントを割り振ります。これは任意の能力基本値を上昇しても良いですが、上昇させられる基本値は１５までとします。
+　次に、算出した能力基本値を３で割り、［判定基本値］を求めます（端数切捨て）。算出した数値をキャラクターシートに書き込みましょう。
+　最後に種族表と武器表を参照して、それぞれのボーナスを記入します。その上で、記入した判定基本値と合計し、能力判定値を算出します。
+　これで能力値が決定します。続いて能力レベルの決定を行います。</p>
+<h2 id="-a-name-statuslevel-"><a name="StatusLevel"> ⑤能力レベルの決定</h2>
+<p>　能力レベルは、その能力値を使った判定にいくつダイスを振ることが出来るかと言うことを表します。能力は２レベルが最低値となり、全てのキャラクターは能力値を２レベル所持しています。つまり、全ての能力で二つのダイスを振ることが出来ます。キャラクター作成時には、任意の能力をふたつ選択します。その能力を３レベルにすることができます。こうすると、その能力で３つダイスを振ることが出来ます。</p>
+<p>　たとえば、【筋力】を３レベルにした場合、登攀などの【筋力】判定を行うダイスロールは三つのダイスを振ることが出来ます。別のページで説明しますが、この判定にダイスを多く振ることが出来るとクリティカルの可能性を高め、ファンブルの可能性を低めることが出来ます。</p>
+<h2 id="-a-name-skill-"><a name="SKill"> ⑥特技の決定</h2>
+<p>　取得した種族、武器クラスから特技を取得します。
+　その取得できるレベルは５レベル分で、一つの特技をレベル上限以下であるならばレベル２以上取得しても構いません。また、種族や武器によって必ず取得する特技を取得してください。<br>　さらに、ワークス特技を、選んだワークスで指定されたカテゴリーからもしくは共通の特技を一つ、そして任意の特技を一つ取得してください。たとえば戦士を選んだ場合、戦闘系か共通を取得し、任意にもう一つどのカテゴリーからも取得することができます。<br>　カテゴリーには以下の通りがあります。</p>
+<ul>
+<li>戦闘系：武器の習熟など、戦闘に関連する特技</li>
+<li>技術系：野外で見につけた技を主とする特技</li>
+<li>知識系：医術や土木など専門的な知識による特技</li>
+<li>社会系：社会的地位やその権力を表す特技</li>
+<li>魔術系：魔術に関する特技</li>
+<li>共通：誰でもとることが出来る特技</li>
+</ul>
+<h2 id="-a-name-item-"><a name="Item"> ⑦アイテムの決定</h2>
+<p>　取得できるアイテムは、必要筋力を超えて、かつ初期作成であれば［初期所持金］の範囲までです。
+　取得した武器クラスから武器を取得することができます。たとえば剣のクラスと弓のクラスを取得したのであれば、その二つを武器として持つことが出来ます。ただし、非推奨ではありますが、クラス外の武器を所持することも可能とします。これはフレーバーなどを考えるためでもあります。自由なキャラメイクをしてもらえるために、あえて禁止はしません。<br>　装備品は武器ふたつと、防具が一つ、アクセサリを１つ所持することが出来ます。所持品は持てるだけ持つことが出来ます。<br>　なお、フレーバー的な装飾品などデータを持たないアイテムに関しては、いくつ持っていても構いません。  </p>
+<h2 id="-a-name-substatus-"><a name="Substatus"> ⑧副能力値の計算</h2>
+<p>最後に算出された能力値から各種副能力値を計算します。それぞれの欄に書き込んでください。</p>
+<h3 id="-">ＨＰ</h3>
+<p>　そのキャラクターの肉体的な行動限界を表す数字。主にダメージで減少し、０以下になると戦闘不能状態になります。<br>　ＨＰは以下の計算式で求めます。<br>・ＨＰ＝ワークス修正＋種族修正＋武器修正＋【筋力基本値】＋その他修正  </p>
+<h3 id="-">ＭＰ</h3>
+<p>　そのキャラクターの精神的な行動限界を表す数字。主に特技使用などで消費されます。０未満にはならず、なっても特に影響はありません。<br>　ＭＰは以下の計算式で求める<br>・ＭＰ＝ワークス修正＋種族修正＋武器修正＋【精神基本値】＋その他修正  </p>
+<h3 id="-">行動値</h3>
+<p>　戦闘時、先制値を決めるための数字。判断の早さなどを表します。<br>　行動値は以下の計算で求めます。<br>・行動値＝（【感覚基本値】＋【知力基本値】÷２＋その他修正  </p>
+<h3 id="-">移動力</h3>
+<p>　戦闘時、どのぐらい一度に移動することができるかを表します。<br>　移動値は以下の計算で求めます。<br>・移動力基本値＝【反射基本値】＋装備修正<br>・移動力＝移動力基本値÷５＋１  </p>
+<h2 id="-a-name-personal-"><a name="Personal"> ⑧パーソナルデータの決定</h2>
+<p>　名前や年齢、性別などプレイヤーが自由に決定するキャラクターの設定を決めるパートです。
+　またこの世界、アザーリアルムで、あなたはどのような人物なのか。どのような生まれを持ち、どのような経験をして、どのような邂逅を持つのか。そのライフパスを決めます。<br>　ライフパスは、生まれを表す「出自」。どんな人生を歩んできたかを表す「境遇」。どんな未来を目指しているのかという「目的」を決めます。<br>　ライフパスはＲｏＣ（Ｒｏｌｌ　ｏｒ　Ｃｈｏｉｃｅ)で決定します。あなたがすでに設定を考えているのであれば、それに近いライフパスを取得しても構いませんし、設定を考えていないのであれば、ライフパスをダイスで決めても構いません。  </p>
+<h3 id="-d66-">出自表(d66)</h3>
+<table>
+<thead>
+<tr>
+<th>ダイス目</th>
+<th>出自</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>００</td>
+<td>任意</td>
+<td>ＧＭと相談し、好きな設定を決定してください。</td>
+</tr>
+<tr>
+<td>１１～１２</td>
+<td>戦士</td>
+<td>あなたの親は戦士だった。国のために戦っていたり、武器を手に持って戦う姿は幼い頃から目に焼き付けられていただろう。</td>
+</tr>
+<tr>
+<td>１３～１４</td>
+<td>傭兵</td>
+<td>あなたの親は傭兵だった。戦場を転々と出向く姿には、どこか哀愁もしくは憧れがあったのかもしれない。</td>
+</tr>
+<tr>
+<td>１５～１６</td>
+<td>剣闘士</td>
+<td>あなたの親は剣闘士だった。闘技場で戦う姿は勇猛果敢で、あなたは憧れを抱いたかもしれないし、見世物にされている親を哀れんだかもしれない。</td>
+</tr>
+<tr>
+<td>２１～２２</td>
+<td>英雄</td>
+<td>あなたの親は英雄だった。多大な功績を残した親のもとに生まれたあなたには、少なからず成長に影響があっただろう。</td>
+</tr>
+<tr>
+<td>２３～２４</td>
+<td>貴族</td>
+<td>あなたの親は貴族だった。その教育はとても厳しかったかもしれないし、もしかしたら自由奔放だったかもしれない。</td>
+</tr>
+<tr>
+<td>２５～２６</td>
+<td>騎士</td>
+<td>あなたの親は騎士だった。国の騎士団に属している。あなたも従者として従軍したこともある。</td>
+</tr>
+<tr>
+<td>３１～３２</td>
+<td>学者</td>
+<td>あなたの親は学者である。幼い頃、本ばかりを読んでいた父親の背中を見ていた。</td>
+</tr>
+<tr>
+<td>３３～３４</td>
+<td>商人</td>
+<td>あなたの親は商人である。親が客とする丁々発止の交渉を見て、あなたは育った。</td>
+</tr>
+<tr>
+<td>３５～３６</td>
+<td>神官</td>
+<td>あなたの親は神官である。様々な説法を人々に教える姿にはどこか威厳を感じられたかもしれない。</td>
+</tr>
+<tr>
+<td>４１～４２</td>
+<td>狩人</td>
+<td>あなたの親は狩人である。子供の頃から、あなたは野外で活動する術を親から学んだ。</td>
+</tr>
+<tr>
+<td>４３～４４</td>
+<td>放浪者</td>
+<td>あなたの親は放浪者である。子供の頃から一箇所で暮らしたことがない。様々なものを風景をみてきた。</td>
+</tr>
+<tr>
+<td>４５～４６</td>
+<td>闇の一族</td>
+<td>あなたの一族は国に使える闇の者である。諜報活動などを請け負っている。闇に生きるのが一族の掟だ。あなたがどう感じていようとも。</td>
+</tr>
+<tr>
+<td>５１～５２</td>
+<td>犯罪組織</td>
+<td>あなたの親は破壊活動や暗殺などの汚れ仕事を引き受けてきた。それを否応にも見てきた。</td>
+</tr>
+<tr>
+<td>５３～５４</td>
+<td>魔術師</td>
+<td>あなたの親は魔術を使うことができる。不思議な力を子供の頃から見せられてきた。</td>
+</tr>
+<tr>
+<td>５５～５６</td>
+<td>祈祷士</td>
+<td>あなたの親は祈祷士だ。豊作を祈るためや、平和を祈るために、各地を転々としてきた。</td>
+</tr>
+<tr>
+<td>６１～６２</td>
+<td>冒険者</td>
+<td>あなたの親はあなたと同じく冒険者だ。輪廻の神様からの加護を受け、あなたの親はアンリバースと戦ってきた。</td>
+</tr>
+<tr>
+<td>６３～６４</td>
+<td>前科者</td>
+<td>あなたの親は犯罪を、もしくは無実の罪で捕まった。あなたは否応にも身分を隠していきなければならなかった。</td>
+</tr>
+<tr>
+<td>６４～６６</td>
+<td>一般人</td>
+<td>あなたは一般の家庭に生まれた。何の変化も無い、平穏な日々にあなたは何を感じるか。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-d66-">境遇表(d66)</h3>
+<table>
+<thead>
+<tr>
+<th>ダイス目</th>
+<th>出自</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>００</td>
+<td>任意</td>
+<td>ＧＭと相談し、好きな設定を決定してください。</td>
+</tr>
+<tr>
+<td>１１～１２</td>
+<td>師匠</td>
+<td>あなたは何かに対する、もしくは人生の師匠と出会った。その経験は今も生きている。</td>
+</tr>
+<tr>
+<td>１３～１４</td>
+<td>傷病</td>
+<td>あなたは何か大きな傷、もしくは病で寝込んでいた。今は回復しているが、その影響は残っている。</td>
+</tr>
+<tr>
+<td>１５～１６</td>
+<td>略奪</td>
+<td>あなたは何かを奪われた。それは家族なのかもしれないし、大事な財産なのかもしれない。</td>
+</tr>
+<tr>
+<td>２１～２２</td>
+<td>苦難</td>
+<td>あなたは酷い苦難に見舞われた。それは大災害かもしれないし、アンリバースからの襲撃かもしれない。</td>
+</tr>
+<tr>
+<td>２３～２４</td>
+<td>天啓</td>
+<td>あなたは天の声を聞いた（もしくはような気がした）。その天の声をあなたは信じている。</td>
+</tr>
+<tr>
+<td>２５～２６</td>
+<td>紛失</td>
+<td>あなたは何かをなくしてしまった。大事な何かだったような気がするが、どこでなくしたかはわからない。</td>
+</tr>
+<tr>
+<td>３１～３２</td>
+<td>出世</td>
+<td>あなたは一度出世した。一時的、もしくは現在も確かな地位を持っていることだろう。</td>
+</tr>
+<tr>
+<td>３３～３４</td>
+<td>秘密</td>
+<td>あなたは境遇したことを秘密にしている。その何かはあなた自身がＧＭと相談して決めること。</td>
+</tr>
+<tr>
+<td>３５～３６</td>
+<td>財宝</td>
+<td>あなたは財宝を見つけ出した。そのおかげで、もしくはせいで、周りからの目は変わった。</td>
+</tr>
+<tr>
+<td>４１～４２</td>
+<td>天涯孤独</td>
+<td>あなたは天涯孤独の身だ。親に捨てられた、もしくは親が亡くなり、身内がいない。</td>
+</tr>
+<tr>
+<td>４３～４４</td>
+<td>順風満帆</td>
+<td>あなたの人生は順風満帆だった。何も苦労も知らないあなたは、どこか物足りなさを感じているかもしれない。</td>
+</tr>
+<tr>
+<td>４５～４６</td>
+<td>死に掛け</td>
+<td>あなたは一度死に掛けた。もしくは、周りから死んだと思われているかもしれない。</td>
+</tr>
+<tr>
+<td>５１～５２</td>
+<td>前世</td>
+<td>あなたは前世の記憶を蘇らせた。元の世界に戻りたいと思っても死ぬしかないので、それをためらっている。</td>
+</tr>
+<tr>
+<td>５３～５４</td>
+<td>逃走</td>
+<td>あなたは何かから逃げている。それはアンリバースかもしれないし、何か悪さをしたからかもしれない。</td>
+</tr>
+<tr>
+<td>５５～５６</td>
+<td>親友</td>
+<td>あなたにはかけがえのない親友がいる、もしくはいた。あなたはその親友から少なからず影響を受けているだろう。</td>
+</tr>
+<tr>
+<td>６１～６２</td>
+<td>渡来</td>
+<td>あなたは遠くの国からやってきた。地殻変動が起こった後の険しい道をたどり、今の場所にいる。</td>
+</tr>
+<tr>
+<td>６３～６４</td>
+<td>名誉</td>
+<td>あなたは名誉を得た。それは誰かを救ったというかもしれないし、戦場で功績を挙げたことなのかもしれない。</td>
+</tr>
+<tr>
+<td>６４～６６</td>
+<td>牢屋</td>
+<td>あなたは牢屋にいた。無実の罪か、もしくは何か犯罪を起こし、牢屋に入れれていた。今は釈放されている。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-d66-">経験表(d66)</h3>
+<table>
+<thead>
+<tr>
+<th>ダイス目</th>
+<th>出自</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>００</td>
+<td>任意</td>
+<td>ＧＭと相談し、好きな設定を決定してください。</td>
+</tr>
+<tr>
+<td>１１～１２</td>
+<td>友情</td>
+<td>あなたは誰かとの友情を大事にし、その友情のために生きている。</td>
+</tr>
+<tr>
+<td>１３～１４</td>
+<td>扶養</td>
+<td>あなたは誰か、家族や恋人を養うために生きている。</td>
+</tr>
+<tr>
+<td>１５～１６</td>
+<td>贖罪</td>
+<td>あなたは犯した罪を償うために生きている。</td>
+</tr>
+<tr>
+<td>２１～２２</td>
+<td>金銭</td>
+<td>あなたは一攫千金を目指して、危険な道を歩もうとしている。</td>
+</tr>
+<tr>
+<td>２３～２４</td>
+<td>奪還</td>
+<td>あなたは奪われたもの、名誉や大事な財産などを取り戻すために生きている。</td>
+</tr>
+<tr>
+<td>２５～２６</td>
+<td>忠義</td>
+<td>あなたは誰かに忠義を尽くすことを生きがいとして生き、冒険者になったのもそのためだ。</td>
+</tr>
+<tr>
+<td>３１～３２</td>
+<td>修行</td>
+<td>あなたはもっと強くなるために、冒険者と言う危険な生き方を選んだ。</td>
+</tr>
+<tr>
+<td>３３～３４</td>
+<td>正義</td>
+<td>あなたは弱いものを救うために正義の味方となるべく、生きている。</td>
+</tr>
+<tr>
+<td>３５～３６</td>
+<td>命令</td>
+<td>あなたは誰かからの命令を受けて、冒険者となった。それは何か諜報をするためかもしれない。</td>
+</tr>
+<tr>
+<td>４１～４２</td>
+<td>戦好き</td>
+<td>あなたは単に戦うことが好きで、アンリバースとの戦いに生きがいを感じている。</td>
+</tr>
+<tr>
+<td>４３～４４</td>
+<td>功名</td>
+<td>あなたは名誉を得るためにアンリバースと戦う人生を送ることを目的としている。</td>
+</tr>
+<tr>
+<td>４５～４６</td>
+<td>復讐</td>
+<td>あなたは大事なものを奪われ、壊されたことへの復讐のために生きている。</td>
+</tr>
+<tr>
+<td>５１～５２</td>
+<td>名誉</td>
+<td>あなたは今もっている名誉を守るために戦っている。</td>
+</tr>
+<tr>
+<td>５３～５４</td>
+<td>遺志</td>
+<td>あなたは誰かからの遺志を受け継いで、今の生き方をしている。</td>
+</tr>
+<tr>
+<td>５５～５６</td>
+<td>孝行</td>
+<td>あなたは誰かに報いるために、今の生き方をしている。</td>
+</tr>
+<tr>
+<td>６１～６２</td>
+<td>冒険</td>
+<td>あなたは冒険が好きで、アンリバースが作り出す迷宮などを冒険したくてしかたない。</td>
+</tr>
+<tr>
+<td>６３～６４</td>
+<td>求道</td>
+<td>あなたは一つの道を究めるために、冒険者になった。</td>
+</tr>
+<tr>
+<td>６４～６６</td>
+<td>自由</td>
+<td>あなたはあなたの自由に生きている。何者にも縛られずに、あなたは生きている。</td>
+</tr>
+</tbody>
+</table>
+<p>お疲れ様でした！これでキャラクターメイクは終了となります！</p>
+
+</article>
+</body>
+</html>
