@@ -25,7 +25,7 @@ __－倒せ！稼げ！全ては己の欲望のまま！アンリバースを打
 ---
 [プロローグ](page/index.html#prologe)　／　[はじめに](page/index.html#readme)　／　[世界観概要](page/index.html#world)　／　[用語集および処理の仕方](page/index.html#words)
 
-# <a name ="prologe"></a> プロローグ
+# <a name ="prologe"></a> プロローグ 
 死人の魂が辿り着く場所といわれている世界アザーリアルム  
 
 そこには多くの種族の生き物が暮らしていた。  
