@@ -1,11 +1,97 @@
-#menu { display: block; float: left; }
-#menu li { cursor: auto; }
-#menu li.link:hover { cursor: pointer; }
-#menu li > ul { display: none; }
-#menu li > ul.open { display: block; }
-#menu li.select { background-color: lightgray; }
+body {
+	font-family: "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+	background-color: #2b2929;
+	color: #fef8fb;
+}
 
-article { display: block; }
+a {
+	color: #ef90a8;
+}
+
+hr {
+}
+
+header {
+	display: block;
+	width: 100%;
+	height: 40px;
+	background-image: url( img/titlerogo2.png );
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	padding: 4px 8px;
+	background-color: #43363c;
+	border-radius: 4px;
+}
+
+h2 {
+	padding-left: 16px;
+	border: 1px solid #43363c;
+	border-left: 8px solid #43363c;
+	border-right: 8px solid #43363c;
+	border-radius: 4px;
+}
+
+h3 {
+	padding-left: 16px;
+	border-bottom: 1px solid #43363c;
+	border-left: 8px solid #43363c;
+	border-radius: 4px;
+}
+
+#menu {
+	display: block;
+	width: 200px;
+	position: absolute;
+	top: 56px;
+	left: 0px;
+	margin: 16px;
+	padding: 8px;
+	box-sizing: border-box;
+	background-color: #43363c;
+	border-radius: 4px;
+}
+#menu ul {
+	list-style: none;
+	padding: 0px;
+	border-radius: 4px;
+}
+#menu li > ul {
+	padding-left: 10px;
+}
+#menu li {
+	cursor: auto;
+	border-radius: 4px;
+}
+#menu li:hover {
+}
+#menu li.link:hover {
+	cursor: pointer;
+}
+#menu li > ul {
+	display: none;
+}
+#menu li > ul.open {
+	display: block;
+}
+#menu li.select {
+	background-color: #3f2232;
+}
+#menu li > a {
+	display: inline-block;
+	width: 100%;
+	border-radius: 4px;
+}
+#menu li > a:hover {
+	background-color: #3f2232;
+}
+
+article {
+	display: block;
+	margin-left: 232px;
+}
 
 table {
   border-collapse: collapse;
