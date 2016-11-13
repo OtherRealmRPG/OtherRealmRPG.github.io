@@ -16,7 +16,15 @@
     * [ダクネス](page/group/dknes.html)
     * [ライロ](page/group/railo.html)
     * [ドラゴ](page/group/drago.html)
-* 武器クラスデータ
+* 武器クラス・ワークス特技データ
+  * [ワークス特技](page/weapon/works.html)
+  * [小剣](page/weapon/knife.html)
+  * [長剣](page/weapon/sword.html)
+  * [刀](page/weapon/katana.html)
+  * [斧](page/weapon/axe.html)
+  * [弓](page/weapon/bow.html)
+  * [ボウガン](page/weapon/bowgun.html)
+  * [腕輪](page/weapon/bangle.html)
 * アイテムデータ
 * ワールドセクション
 * エネミーデータ
