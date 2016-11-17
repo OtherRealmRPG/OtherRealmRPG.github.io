@@ -61,8 +61,14 @@
 <hr>
 <p>『ＯＲＭ』の世界で遊ぶためには、あなたの分身となるキャラクターを作成しなければなりません。<br>最初は苦戦するかもしれませんが。大丈夫、何度も作っていればすぐに慣れるでしょう！<br>専用のシートをＤＬして、以下の手順どおり作成してみましょう！  </p>
 <ul>
-<li>目次<br>①<a href="page/rule/charamake.html#Level">レベルの決定</a><br>②<a href="page/rule/charamake.html#Class">種族、武器クラスの決定</a><br>③<a href="page/rule/charamake.html#Works">ワークスの決定</a><br>④<a href="page/rule/charamake.html#Status">能力値の決定</a><br>⑤<a href="page/rule/charamake.html#StatusLevel">能力レベルの決定</a><br>⑥<a href="page/rule/charamake.html#SKill">特技の決定</a><br>⑦<a href="page/rule/charamake.html#Item">アイテムの決定</a><br>⑧<a href="page/rule/charamake.html#Substatus">副能力値の計算</a><br>⑨<a href="page/rule/charamake.html#Personal">パーソナルデータの決定</a>  </li>
+<li>目次
+<a href="page/rule/charamake.html#flow">フローチャート</a><br>①<a href="page/rule/charamake.html#Level">レベルの決定</a><br>②<a href="page/rule/charamake.html#Class">種族、武器クラスの決定</a><br>③<a href="page/rule/charamake.html#Works">ワークスの決定</a><br>④<a href="page/rule/charamake.html#Status">能力値の決定</a><br>⑤<a href="page/rule/charamake.html#StatusLevel">能力レベルの決定</a><br>⑥<a href="page/rule/charamake.html#SKill">特技の決定</a><br>⑦<a href="page/rule/charamake.html#Item">アイテムの決定</a><br>⑧<a href="page/rule/charamake.html#Substatus">副能力値の計算</a><br>⑨<a href="page/rule/charamake.html#Personal">パーソナルデータの決定</a>  </li>
 </ul>
+<h2 id="-a-name-flow-a-"><a name="flow"></a> フローチャート</h2>
+<p>キャラクターシートの記載の流れは以下の通りです。</p>
+<p>・レベル欄に１を記入する。<br>↓<br>・選んだワークスの能力値を【能力基本値】の欄に記入する。<br>↓<br>・初期ボーナス５点を振り分ける<br>↓<br>・能力基本値の合計を３で割り、【判定基本値】を出す。<br>↓<br>・種族表と武器表の値をそれぞれ種族ボーナス、武器ボーナス欄に記入する。<br>↓<br>・能力を二つ選び、能力レベル欄に３と記入する。他は２と記入する。<br>↓<br>・特技を取得し、特技欄にそれぞれ記入する。<br>↓<br>アイテムを選び、記入する。補正を記入していく。<br>↓<br>副能力値を計算する<br>↓<br>パーソナルデータを決定し、記入する。</p>
+<p>以上となります。なお、公開されているキャラクターシートは、オンライン上で一部の
+計算を行ってくれます。</p>
 <h2 id="-a-name-level-a-"><a name="Level"></a> ①レベルの決定</h2>
 <p>　まずこのレベル欄には「１」が記入されます。もしあなたがレベルの高い状態から開始しようと思った場合でも、<br>この数値は１からはじめるといいでしょう。その後、レベルアップの処理を行えばよいのだから。</p>
 <h2 id="-a-name-class-a-"><a name="Class"></a> ②種族、武器クラスの決定</h2>
@@ -605,7 +611,7 @@
 <p>　たとえば、【筋力】を３レベルにした場合、登攀などの【筋力】判定を行うダイスロールは
 三つのダイスを振ることが出来ます。<br>別のページで説明しますが、この判定にダイスを多く振ることが出来るとクリティカルの可能性を高め、<br>ファンブルの可能性を低めることが出来ます。  </p>
 <h2 id="-a-name-skill-a-"><a name="SKill"></a> ⑥特技の決定</h2>
-<p>　取得した種族、武器クラスから特技を取得します。<br>　その取得できるレベルは８レベル分で、１つの特技をレベル上限以下であるならば<br>レベル２以上取得しても構いません。また、種族や武器によって必ず取得する特技を取得してください。<br>　さらに、ワークス特技を、選んだワークスで指定されたカテゴリーからもしくは共通の特技を１つ、<br>そして任意の特技を１つ取得してください。たとえば戦士を選んだ場合、戦闘系か共通を取得し、<br>任意にもう一つどのカテゴリーからも取得することができます。<br>　カテゴリーには以下の通りがあります。</p>
+<p>　取得した種族、武器クラスから特技を取得します。<br>　その取得できるレベルは６レベル分で、１つの特技をレベル上限以下であるならば<br>レベル２以上取得しても構いません。また、種族や武器によって必ず取得する特技を取得してください。<br>この取得にはレベルの消費は行いません。<br>　さらに、ワークス特技を、選んだワークスで指定されたカテゴリーからもしくは共通の特技を１つ、<br>そして任意の特技を１つ取得してください。たとえば戦士を選んだ場合、戦闘系か共通を取得し、<br>任意にもう一つどのカテゴリーからも取得することができます。<br>　カテゴリーには以下の通りがあります。</p>
 <ul>
 <li>戦闘系：武器の習熟など、戦闘に関連する特技</li>
 <li>技術系：野外で見につけた技を主とする特技</li>
@@ -838,11 +844,11 @@
 <tr>
 <td>６４～６６</td>
 <td>牢屋</td>
-<td>あなたは牢屋にいた。無実の罪か、もしくは何か犯罪を起こし、牢屋に入れれていた。今は釈放されている。</td>
+<td>あなたは牢屋にいた。無実の罪か、もしくは何か犯罪を起こし、牢屋に入れられていた。今は釈放されている。</td>
 </tr>
 </tbody>
 </table>
-<h3 id="-d66-">経験表(d66)</h3>
+<h3 id="-d66-">目的表(d66)</h3>
 <table>
 <thead>
 <tr>
