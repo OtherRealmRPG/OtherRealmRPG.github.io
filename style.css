@@ -1,4 +1,4 @@
-body {
+﻿body {
 	font-family: "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
 	background-color: #2b2929;
 	color: #fef8fb;
@@ -102,5 +102,5 @@ th, td {
   border: 1px solid #CCC;
 }
 th {
-  background: #EEE;
+  background: #666;
 }

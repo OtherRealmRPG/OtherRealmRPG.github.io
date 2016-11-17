@@ -26,5 +26,9 @@
   * [ボウガン](page/weapon/bowgun.html)
   * [腕輪](page/weapon/bangle.html)
 * アイテムデータ
+  * [武器データ](page/item/weapon.html)
+  * [防具データ](page/item/protector.html)
+  * [所持品データ](page/item/item.html)
 * ワールドセクション
+  * [ワールドセクション](page/world/worldsection.html)
 * エネミーデータ
