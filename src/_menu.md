@@ -33,4 +33,4 @@
   * [ワールドセクション](page/world/worldsection.html)
 * エネミーデータ
 * ダウンロード
-  * キャラクターシートなど
+  * [キャラクターシートなど](page/download/download.html)
