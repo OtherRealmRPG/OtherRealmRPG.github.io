@@ -6,11 +6,11 @@
 発揮させます。
 
 + 目次  
-①[共通](page/weapon/woroks.html#Common)  
-②[戦闘系](page/weapon/woroks.html#Battle)  
-③[技術系](page/weapon/woroks.html#SKills)  
-④[知識系](page/weapon/woroks.html#Knowledge)  
-⑤[社会系](page/weapon/woroks.html#Society)  
+①[共通](page/weapon/works.html#Common)  
+②[戦闘系](page/weapon/works.html#Battle)  
+③[技術系](page/weapon/works.html#SKills)  
+④[知識系](page/weapon/works.html#Knowledge)  
+⑤[社会系](page/weapon/works.html#Society)  
 
 ## <a name="Common"></a> 共通
 
