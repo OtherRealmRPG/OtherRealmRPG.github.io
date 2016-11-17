@@ -6,7 +6,7 @@
 最初は苦戦するかもしれませんが。大丈夫、何度も作っていればすぐに慣れるでしょう！  
 専用のシートをＤＬして、以下の手順どおり作成してみましょう！  
 
-+ 目次
++ 目次  
 [フローチャート](page/rule/charamake.html#flow)   
 ①[レベルの決定](page/rule/charamake.html#Level)  
 ②[種族、武器クラスの決定](page/rule/charamake.html#Class)  
