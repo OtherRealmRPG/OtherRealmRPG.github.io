@@ -4,6 +4,7 @@
 
 * はじめに
     * [はじめに](page/)
+    * [更新履歴](page/whatnew.html)
 * ルールセクション
     * [キャラクターメイク](page/rule/charamake.html)
     * [コアルール](page/rule/corerule.html)
@@ -32,5 +33,8 @@
 * ワールドセクション
   * [ワールドセクション](page/world/worldsection.html)
 * エネミーデータ
+  * [エネミデータの見方](page/enemy/enemydataindex.html)
+  * [モブエネミー](page/enemy/mobenemy.html)
+  * [エネミー](page/enemy/enemyenemy.html)
 * ダウンロード
   * [キャラクターシートなど](page/download/download.html)

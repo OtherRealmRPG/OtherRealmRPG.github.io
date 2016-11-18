@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><base href="../.."><title>エネミーデータの見方 - 魔界立志ＲＰＧアザーリアルム</title>
+<link rel="stylesheet" href="./style.css" type="text/css">
+<script src="./menu.js"></script>
+</head>
+<body>
+<header></header><section id="menu"><p><a href="./">トップ</a></p>
+<p>クリックするとメニューが開きます。</p>
+<ul>
+<li>はじめに<ul>
+<li><a href="page/">はじめに</a></li>
+<li><a href="page/whatnew.html">更新履歴</a></li>
+</ul>
+</li>
+<li>ルールセクション<ul>
+<li><a href="page/rule/charamake.html">キャラクターメイク</a></li>
+<li><a href="page/rule/corerule.html">コアルール</a></li>
+<li><a href="page/rule/spotrule.html">スポットルール</a></li>
+</ul>
+</li>
+<li>クラスデータ<ul>
+<li><a href="page/group/skillindex.html">特技について</a></li>
+<li><a href="page/group/miga.html">ミーガ</a></li>
+<li><a href="page/group/dkmiga.html">ダクミーガ</a></li>
+<li><a href="page/group/hsl.html">ハスル</a></li>
+<li><a href="page/group/dknes.html">ダクネス</a></li>
+<li><a href="page/group/railo.html">ライロ</a></li>
+<li><a href="page/group/drago.html">ドラゴ</a></li>
+</ul>
+</li>
+<li>武器クラス・ワークス特技データ<ul>
+<li><a href="page/weapon/works.html">ワークス特技</a></li>
+<li><a href="page/weapon/knife.html">小剣</a></li>
+<li><a href="page/weapon/sword.html">長剣</a></li>
+<li><a href="page/weapon/katana.html">刀</a></li>
+<li><a href="page/weapon/axe.html">斧</a></li>
+<li><a href="page/weapon/bow.html">弓</a></li>
+<li><a href="page/weapon/bowgun.html">ボウガン</a></li>
+<li><a href="page/weapon/bangle.html">腕輪</a></li>
+</ul>
+</li>
+<li>アイテムデータ<ul>
+<li><a href="page/item/weapon.html">武器データ</a></li>
+<li><a href="page/item/protector.html">防具データ</a></li>
+<li><a href="page/item/item.html">所持品データ</a></li>
+</ul>
+</li>
+<li>ワールドセクション<ul>
+<li><a href="page/world/worldsection.html">ワールドセクション</a></li>
+</ul>
+</li>
+<li>エネミーデータ<ul>
+<li><a href="page/enemy/enemydataindex.html">エネミデータの見方</a></li>
+<li><a href="page/enemy/mobenemy.html">モブエネミー</a></li>
+<li><a href="page/enemy/enemyenemy.html">エネミー</a></li>
+</ul>
+</li>
+<li>ダウンロード<ul>
+<li><a href="page/download/download.html">キャラクターシートなど</a></li>
+</ul>
+</li>
+</ul>
+</section>
+<article><h1 id="-">エネミーデータの見方</h1>
+<hr>
+<h2 id="-">エネミーデータの種類</h2>
+<p>敵にはモブエネミーと、エネミーが存在します。  </p>
+<h3 id="-">モブエネミー</h3>
+<p>モブエネミーは、１体だけだとエキストラ（つまりはデータを持たず、宣言一つで倒されてしまう存在）<br>ですが、群れを成して、はじめてデータを持つ存在です。１トループにつき５体から２０体と考えると<br>よいでしょう。<br>また、ＧＭは既存のデータを下に、オリジナルのモブエネミーを作り出しても構いません。</p>
+<p>モブエネミーの見方は以下の通りです。</p>
+<p>名称：<br>種別：　レベル：<br>ＨＰ：　ＭＰ：<br>行動値：　移動力：<br>防御力　武器／炎熱／衝撃／体内<br>リアクション：<br>特技：<br>解説：  </p>
+<ul>
+<li>名称：そのモブエネミーの名前です</li>
+<li>種別：そのモブエネミーの種族、もしくはアンリバースかです。</li>
+<li>レベル：そのモブエネミーのレベルです。</li>
+<li>副能力値（ＨＰなど）：そのモブエネミーの副能力値です。</li>
+<li>防御力：そのモブエネミーの防御力です</li>
+<li>リアクション：モブエネミーは能力値を持たないので、リアクション値を固定とします。<br>もしモブエネミーが「リアクションのダイスを１個減らす」などの効果を受けた場合は<br>リアクション値を－３するとよいでしょう。</li>
+<li>特技：モブエネミーが持つ特技です。データはＧＭが任意に作成しても構いません。<br>モブエネミーの特技は戦闘中に使うことを想定しています。</li>
+<li>解説：モブエネミーの簡単な解説です。エネミードロップもここに記述します。</li>
+</ul>
+<h4 id="-">モブエネミーのＨＰ</h4>
+<p>モブエネミーはＨＰ０になったら瀕死状態になり、原則回復することはできません。<br>生死については、ＧＭが判断しましょう。</p>
+<h4 id="-">モブエネミーの出血</h4>
+<p>モブエネミーが出血状態になった場合、そのダメージは</p>
+<p>［１０＋エネミーレベル］</p>
+<p>とします。</p>
+<h3 id="-">エネミー</h3>
+<p>エネミーは、強力な力を持つため１体でデータを持ちます。また、能力値も所持しています。
+細かいデータを持つことで、より強力な敵らしい動きを可能とします。<br>また、ＧＭは既存のデータを下に、オリジナルのエネミーを作り出しても構いません。</p>
+<p>エネミーの見方は以下の通りです。</p>
+<p>名称：<br>種別：　レベル：<br>能力値：筋力（）／　反射（）／　感覚（）／　知力（）／　精神（）／　社会（）／
+ＨＰ：　ＭＰ：<br>行動値：　移動力：<br>防御力　武器／炎熱／衝撃／体内<br>攻撃：
+特技：<br>解説：  </p>
+<ul>
+<li>名称：そのエネミーの名前です</li>
+<li>種別：そのエネミーの種族、もしくはアンリバースかです。筋力（レベル）基本値／判定値と記されます。</li>
+<li>レベル：そのエネミーのレベルです。</li>
+<li>能力値（筋力など）：そのエネミーの能力値です。</li>
+<li>副能力値（ＨＰなど）：そのエネミーの副能力値です。</li>
+<li>防御力：そのエネミーの防御力です</li>
+<li>攻撃：そのエネミーの武器攻撃のデータです。</li>
+<li>特技：エネミーが持つ特技です。データはＧＭが任意に作成しても構いません。またクラス特技を<br>使わせても構いません。  </li>
+<li>解説：エネミーの簡単な解説です。</li>
+</ul>
+
+</article>
+</body>
+</html>
