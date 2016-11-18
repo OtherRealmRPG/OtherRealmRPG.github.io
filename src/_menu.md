@@ -35,6 +35,6 @@
 * エネミーデータ
   * [エネミデータの見方](page/enemy/enemydataindex.html)
   * [モブエネミー](page/enemy/mobenemy.html)
-  * [エネミー](page/enemy/enemyenemy.html)
+  * [エネミー](page/enemy/enemy/enemy.html)
 * ダウンロード
   * [キャラクターシートなど](page/download/download.html)
