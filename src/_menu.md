@@ -38,3 +38,6 @@
   * [エネミー](page/enemy/enemy.html)
 * ダウンロード
   * [キャラクターシートなど](page/download/download.html)
+* 製作者に連絡
+  * taguma.nk98（あっと）gmail.com （（あっと）の部分を@に変換してください）
+  * [twitter](https://twitter.com/taguma_nk)
