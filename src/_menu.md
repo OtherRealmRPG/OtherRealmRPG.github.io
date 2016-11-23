@@ -17,6 +17,7 @@
     * [ダクネス](page/group/dknes.html)
     * [ライロ](page/group/railo.html)
     * [ドラゴ](page/group/drago.html)
+    * [ライフパス特技](page/group/lifepass.html)
 * 武器クラス・ワークス特技データ
   * [ワークス特技](page/weapon/works.html)
   * [小剣](page/weapon/knife.html)
