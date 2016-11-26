@@ -44,3 +44,6 @@
 * 製作者に連絡
   * taguma.nk98（あっと）gmail.com （（あっと）の部分を@に変換してください）
   * [twitter](https://twitter.com/taguma_nk)
+
+共有ボタンです。  
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://otherrealmrpg.github.io/" data-text="魔界立志ＲＰＧアザーリアルムのページはこちら！" data-hashtags="TRPGアザーリアルム">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
