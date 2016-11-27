@@ -5,6 +5,7 @@
 * はじめに
     * [はじめに](page/)
     * [更新履歴](page/whatnew.html)
+    * [動画紹介](page/download/movie.html)
 * ルールセクション
     * [キャラクターメイク](page/rule/charamake.html)
     * [コアルール](page/rule/corerule.html)
